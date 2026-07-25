@@ -56,5 +56,5 @@ endBtn.addEventListener('click', () => {
         game.style.backgroundImage = ''
         questionSong.pause()
     }, 2000)
-    mainGame.classList.remove()
+    mainGame.classList.remove("animate__backInUp")
 })
