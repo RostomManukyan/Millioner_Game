@@ -79,6 +79,11 @@ startBtn.addEventListener('click', () => {
     game.style.backgroundImage = 'url("./img/galaxy.jpg")'
     game.style.backgroundSize = "100%"
     startBtn.classList.add("animate__animated", "animate__backOutUp")
-    startBtn.classList.remove("animate_backOutDown")
+    startBtn.classList.remove("animate__backOutDown")
     showBtn.remove()
+    // new changes at home 
+    setTimeout(() => {
+        startBtn.classList.remove("animate__backOutUp")
+        startBtn.remove()
+    },500)
 })
