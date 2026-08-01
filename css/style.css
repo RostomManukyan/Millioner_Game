@@ -39,7 +39,7 @@ body {
     background-color: rgb(59, 78, 133);
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 15px;
     cursor: pointer;
     font-size: 18px;
     text-transform: uppercase;
@@ -47,6 +47,11 @@ body {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: 1s;
+}
+.information:hover{
+  box-shadow: 0 0 15px 0px rgb(157, 220, 228);
+  transform: scale(1.2);
 }
 .information.hide{
     opacity: 0;
@@ -54,7 +59,7 @@ body {
 }
 
 .start-btn:hover {
-    box-shadow: 0 0 15px 0px rgb(97, 219, 131);
+    box-shadow: 0 0 15px 0px rgb(157, 220, 228);
     transform: scale(1.2);
 }
 

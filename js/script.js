@@ -106,6 +106,7 @@ endBtn.addEventListener('click', () => {
   generalMusic.play()
 
   getStartGame()
+
 })
 
 // Խաղի սկիզբը
@@ -410,7 +411,8 @@ function correctnessAnswer(numberQuestion, userAnswer, blockAnswer, blockQuestio
       setTimeout(() => {
         startBtn.classList.remove('animate__backInDown');
         game.style.backgroundImage = '';
-
+        showBtn.classList.remove('hide')
+        generalMusic.play()
       }, 2000);
 
       let userWin = document.querySelector('.user-win');
@@ -445,7 +447,7 @@ function getRemoveClassName() {
 }
 
 function getBlockBefore(block) {
-  block.insertAdjacentHTML('beforebegin', `<div class="user-win animate__animated animate__fadeIn"><p>Ձեր հաղթանակը</p><p>"${getGuarantWin()}"</p></div>`)
+  block.insertAdjacentHTML('beforebegin', `<div class="user-win animate__animated animate__fadeIn"><p>Ձեր հաղթանակը</p><p>${getGuarantWin()} ԴՐԱՄ</p></div>`)
 }
 
 function getGuarantWin() {
@@ -459,7 +461,7 @@ function getGuarantWin() {
         }
         getUserWin += symbol
       }
-      return getUserWin + ' ԴՐԱՄ'
+      return getUserWin
     }
   }
   return 0
@@ -538,7 +540,7 @@ function winGuaranted(numBlock) {
 
 function getActiveBlockQuestion() {
   for (let i = 0; i < blockQuestion.length; i++) {
-    if (blockQuestion.classList.contains('question-active')) {
+    if (blockQuestion[i].classList.contains('question-active')) {
       return blockQuestion[i]
     }
   }
