@@ -602,4 +602,4 @@ const answers = {
   question_14: 'Բ. Մարի Կյուրի',
   question_15: 'Բ. Ամազոն',
   question_extra: 'Դ. Երազների'
-}
+}  
