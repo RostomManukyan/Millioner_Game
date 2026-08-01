@@ -24,7 +24,7 @@ let aiExplainText = document.getElementById('aiExplainText');
 let aiExplainClose = document.getElementById('aiExplainClose');
 
 const OPENAI_API_KEY = ' ';
-const OPENAI_MODEL = '';
+const OPENAI_MODEL = 'gpt-5.4';
 
 showBtn.addEventListener('click', function () {
   popup.classList.add('show');
